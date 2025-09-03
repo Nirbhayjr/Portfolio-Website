@@ -211,13 +211,24 @@ header .navbar ul li a:hover {
   flex: 1 1 40rem;
   z-index: 1;
 }
+/* Fix hero section image */
 .home .image img {
-  width: 70%;
-  margin-left: 6rem;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
+  width: 220px;         /* or any size that fits well */
+  height: 220px;        /* keep height equal for circle */
+  border-radius: 50%;   /* make it round */
+  object-fit: cover;    /* crop instead of stretching */
+  display: block;
+  margin: 0 auto;       /* center align */
 }
+
+/* For small screens */
+@media (max-width: 768px) {
+  .home .image img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
 .home .image img:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
