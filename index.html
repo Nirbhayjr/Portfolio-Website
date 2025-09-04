@@ -316,50 +316,42 @@
 <!-- experience section ends -->
 
 <!-- contact section starts -->
-<section class="contact" id="contact">
-  
-  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
-
-  <div class="container">
-    <div class="content">
-      <div class="image-box">
-        <img draggable="false" src="./assets/images/contact1.png" alt="">
-      </div>
-    <form id="contact-form" name="contact" method="POST" data-netlify="true">
-  <!-- hidden input required for Netlify -->
-  <input type="hidden" name="form-name" value="contact">
-
-  <div class="form-group">
-    <div class="field">
-      <input type="text" name="name" placeholder="Name" required>
-      <i class='fas fa-user'></i>
-    </div>
-    <div class="field">
-      <input type="email" name="email" placeholder="Email" required>
-      <i class='fas fa-envelope'></i>
-    </div>
-    <div class="field">
-      <input type="text" name="phone" placeholder="Phone">
-      <i class='fas fa-phone-alt'></i>
-    </div>
-    <div class="message">
-      <textarea placeholder="Message" name="message" required></textarea>
-      <i class="fas fa-comment-dots"></i>
-    </div>
-  </div>
-
-  <div class="button-area">
-    <button type="submit">
-      Submit <i class="fa fa-paper-plane"></i>
-    </button>
-  </div>
+<section id="contact" class="contact section">
+<div class="contact__container container grid">
+<h2 class="heading contact__heading">
+<i class="fa-solid fa-envelope"></i>
+Contact Me
+</h2>
+<div class="contact__form">
+<form id="contact-form" name="contact" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="contact" />
+<input type="text" id="name" name="name" placeholder="Your Name" class="form__control" required>
+<input type="email" id="email" name="email" placeholder="Your Email" class="form__control" required>
+<textarea id="message" name="message" placeholder="Your Message" class="form__control" required></textarea>
+<button type="submit" class="button button--theme contact__btn">
+Send Message
+</button>
 </form>
-
-
-  </div>
-  </div>
+</div>
+<div class="contact__info">
+<div class="contact__info-card">
+<i class="fa-solid fa-location-dot contact__info-card-icon"></i>
+<h4 class="contact__info-card-heading">Location</h4>
+<p class="contact__info-card-text">Patna, Bihar, India</p>
+</div>
+<div class="contact__info-card">
+<i class="fa-solid fa-phone contact__info-card-icon"></i>
+<h4 class="contact__info-card-heading">Contact No.</h4>
+<p class="contact__info-card-text">+91 7488754178</p>
+</div>
+<div class="contact__info-card">
+<i class="fa-solid fa-envelope contact__info-card-icon"></i>
+<h4 class="contact__info-card-heading">Email Address</h4>
+<p class="contact__info-card-text">nirbhay1005@gmail.com</p>
+</div>
+</div>
+</div>
 </section>
-<!-- contact section ends -->
 
 
 <!-- footer section starts -->
@@ -438,6 +430,7 @@
 
 </body>
 </html>
+
 
 
 
