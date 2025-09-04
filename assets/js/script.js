@@ -37,7 +37,7 @@ $(document).ready(function () {
         }, 500, 'linear')
     });
 
-  // <!-- emailjs to mail contact form data -->
+    // <!-- emailjs to mail contact form data -->
     $("#contact-form").submit(function (event) {
         emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
 
@@ -53,6 +53,21 @@ $(document).ready(function () {
         event.preventDefault();
     });
     // <!-- emailjs to mail contact form data -->
+
+});
+
+document.addEventListener('visibilitychange',
+    function () {
+        if (document.visibilityState === "visible") {
+            document.title = "Portfolio | Nirbhay Kumar";
+            $("#favicon").attr("href", "assets/images/favicon.png");
+        }
+        else {
+            document.title = "Come Back To Portfolio";
+            $("#favicon").attr("href", "assets/images/favhand.png");
+        }
+    });
+//    
 
 
 // <!-- typed js effect starts -->
