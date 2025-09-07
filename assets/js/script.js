@@ -93,15 +93,21 @@ async function fetchData(type = "skills") {
 function showSkills(skills) {
     let skillsContainer = document.getElementById("skillsContainer");
     let skillHTML = "";
-    skills.forEach(skill => {
+    
+    // Loop through all skills and build the HTML
+    skills.forEach((skill, index) => {
+        // Add a class to skills beyond the first 6 to hide them
+        let hideClass = index >= 6 ? 'hidden-skill' : '';
         skillHTML += `
-        <div class="bar">
+        <div class="bar ${hideClass}">
               <div class="info">
                 <img src=${skill.icon} alt="skill" />
                 <span>${skill.name}</span>
               </div>
-            </div>`
+            </div>`;
     });
+    skillsContainer.innerHTML = skillHTML;
+}
     skillsContainer.innerHTML = skillHTML;
 }
 
