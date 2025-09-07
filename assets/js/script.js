@@ -256,13 +256,13 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
 
 // Show More / Show Less toggle for Skills
 const toggleBtn = document.getElementById("toggleSkills");
-const skillsContainer = document.getElementById("skillsContainer");
+const hiddenSkills = document.querySelector(".hidden-skills");
 
-if (toggleBtn && skillsContainer) {
+if (toggleBtn && hiddenSkills) {
   toggleBtn.addEventListener("click", () => {
-    skillsContainer.classList.toggle("expanded");
-    toggleBtn.innerText = skillsContainer.classList.contains("expanded")
-      ? "Show Less"
+    hiddenSkills.classList.toggle("show");
+    toggleBtn.innerText = hiddenSkills.classList.contains("show") 
+      ? "Show Less" 
       : "Show More";
   });
 }
