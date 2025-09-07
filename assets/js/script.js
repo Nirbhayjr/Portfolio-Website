@@ -264,3 +264,19 @@ if (toggleBtn && skillsContainer) {
       : "Show More";
   });
 }
+
+
+
+// Toggle skills visibility
+const toggleBtn = document.getElementById('toggleSkills');
+const hiddenSkills = document.querySelector('.hidden-skills');
+
+if (toggleBtn && hiddenSkills) {
+  toggleBtn.addEventListener('click', () => {
+    hiddenSkills.classList.toggle('show');
+    toggleBtn.textContent = hiddenSkills.classList.contains('show') 
+      ? 'Show Less' 
+      : 'Show More';
+  });
+}
+
