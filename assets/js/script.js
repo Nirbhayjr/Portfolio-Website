@@ -93,21 +93,15 @@ async function fetchData(type = "skills") {
 function showSkills(skills) {
     let skillsContainer = document.getElementById("skillsContainer");
     let skillHTML = "";
-    
-    // Loop through all skills and build the HTML
-    skills.forEach((skill, index) => {
-        // Add a class to skills beyond the first 6 to hide them
-        let hideClass = index >= 6 ? 'hidden-skill' : '';
+    skills.forEach(skill => {
         skillHTML += `
-        <div class="bar ${hideClass}">
+        <div class="bar">
               <div class="info">
                 <img src=${skill.icon} alt="skill" />
                 <span>${skill.name}</span>
               </div>
-            </div>`;
+            </div>`
     });
-    skillsContainer.innerHTML = skillHTML;
-}
     skillsContainer.innerHTML = skillHTML;
 }
 
@@ -264,10 +258,7 @@ const skillsContainer = document.getElementById("skillsContainer");
 
 if (toggleBtn && skillsContainer) {
   toggleBtn.addEventListener("click", () => {
-    // This will toggle the expanded class on the skills container
     skillsContainer.classList.toggle("expanded");
-    
-    // This will change the button text
     toggleBtn.innerText = skillsContainer.classList.contains("expanded")
       ? "Show Less"
       : "Show More";
