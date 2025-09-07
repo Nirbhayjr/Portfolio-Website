@@ -60,7 +60,7 @@ document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
             document.title = "Portfolio | Nirbhay Kumar";
-            $("#favicon").attr("href", "assets/images/favicon.png");
+            $("#favicon").attr("href", "https://i.postimg.cc/8C1tGgT4/IMG20250721182033-1.jpg");
         }
         else {
             document.title = "Come Back To Portfolio";
@@ -72,7 +72,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
+    strings: ["Frontend Development", "Backend Development", "Web Designing", "Android Development", "Web Development"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
