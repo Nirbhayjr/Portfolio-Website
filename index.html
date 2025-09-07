@@ -132,27 +132,36 @@
 <!-- skills section starts -->
 <section class="skills" id="skills">
 
-    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
 
-    <div class="container">
-          <div class="row" id="skillsContainer">
+  <div class="container">
+    <div class="row" id="skillsContainer">
 
-            <!-- <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
-                <span>AdobeXD</span>
-              </div>
-            </div> -->
+      <!-- always visible skills -->
+      <div class="bar"><span>HTML</span></div>
+      <div class="bar"><span>CSS</span></div>
+      <div class="bar"><span>JavaScript</span></div>
+      <div class="bar"><span>ReactJS</span></div>
+      <div class="bar"><span>NodeJS</span></div>
 
+      <!-- hidden skills (collapsed initially) -->
+      <div class="hidden-skills">
+        <div class="bar"><span>ExpressJS</span></div>
+        <div class="bar"><span>MongoDB</span></div>
+        <div class="bar"><span>Python</span></div>
+        <div class="bar"><span>C++</span></div>
+        <div class="bar"><span>Git & GitHub</span></div>
       </div>
-        <!-- Show More button (only visible on mobile) -->
-<div style="text-align: center; margin-top: 10px;">
-  <button id="toggleSkills">Show More</button>
-</div>
+    </div>
 
-</div>
+    <!-- Show More button -->
+    <div style="text-align: center; margin-top: 10px;">
+      <button id="toggleSkills">Show More</button>
+    </div>
+  </div>
 </section>
 <!-- skills section ends -->
+
 
 
 <!-- education section starts -->
@@ -433,6 +442,7 @@
 
 </body>
 </html>
+
 
 
 
