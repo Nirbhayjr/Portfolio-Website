@@ -264,7 +264,10 @@ const skillsContainer = document.getElementById("skillsContainer");
 
 if (toggleBtn && skillsContainer) {
   toggleBtn.addEventListener("click", () => {
+    // This will toggle the expanded class on the skills container
     skillsContainer.classList.toggle("expanded");
+    
+    // This will change the button text
     toggleBtn.innerText = skillsContainer.classList.contains("expanded")
       ? "Show Less"
       : "Show More";
