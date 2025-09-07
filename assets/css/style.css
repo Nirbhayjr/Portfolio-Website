@@ -1322,3 +1322,29 @@ form .button-area {
   background: #e64a19;
 }
 
+
+/* ========== Skills Show More / Less ========== */
+.hidden-skills {
+  display: none;
+}
+
+.hidden-skills.show {
+  display: block;
+}
+
+#toggleSkills {
+  margin: 10px auto;
+  padding: 8px 16px;
+  background: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+#toggleSkills:hover {
+  background: #e64a19;
+}
+
