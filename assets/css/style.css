@@ -530,7 +530,7 @@ header .navbar ul li a:hover {
     margin: 0;
   }
   .skills .container .row {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin: 1rem;
     padding: 2rem 0.2rem 2rem 0.2rem;
     gap: 1rem;
@@ -1273,15 +1273,4 @@ form .button-area {
   #toggleSkills {
     display: none;
   }
-}
-
-
-/* Add this CSS block to your style.css file */
-
-.skills .container .row .hidden-skill {
-  display: none;
-}
-
-.skills .container .row.expanded .hidden-skill {
-  display: flex; /* or 'grid' depending on your layout */
 }
