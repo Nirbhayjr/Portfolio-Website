@@ -250,3 +250,17 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
+
+
+// Show More / Show Less toggle for Skills
+const toggleBtn = document.getElementById("toggleSkills");
+const skillsContainer = document.getElementById("skillsContainer");
+
+if (toggleBtn && skillsContainer) {
+  toggleBtn.addEventListener("click", () => {
+    skillsContainer.classList.toggle("expanded");
+    toggleBtn.innerText = skillsContainer.classList.contains("expanded")
+      ? "Show Less"
+      : "Show More";
+  });
+}
