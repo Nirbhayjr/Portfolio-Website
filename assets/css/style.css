@@ -1274,3 +1274,14 @@ form .button-area {
     display: none;
   }
 }
+
+
+/* Add this CSS block to your style.css file */
+
+.skills .container .row .hidden-skill {
+  display: none;
+}
+
+.skills .container .row.expanded .hidden-skill {
+  display: flex; /* or 'grid' depending on your layout */
+}
