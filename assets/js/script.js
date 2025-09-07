@@ -81,16 +81,14 @@ var typed = new Typed(".typing-text", {
 // <!-- typed js effect ends -->
 
 async function fetchData(type = "skills") {
-    let response;
-    if (type === "skills") {
-        response = await fetch("assets/skills.json");  // ✅ correct path
-    } else {
-        response = await fetch("./projects/projects.json");
-    }
+    let response
+    type === "skills" ?
+        response = await fetch("skills.json")
+        :
+        response = await fetch("./projects/projects.json")
     const data = await response.json();
     return data;
 }
-
 
 function showSkills(skills) {
     let skillsContainer = document.getElementById("skillsContainer");
@@ -256,30 +254,13 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
 
 // Show More / Show Less toggle for Skills
 const toggleBtn = document.getElementById("toggleSkills");
-const hiddenSkills = document.querySelector(".hidden-skills");
+const skillsContainer = document.getElementById("skillsContainer");
 
-if (toggleBtn && hiddenSkills) {
+if (toggleBtn && skillsContainer) {
   toggleBtn.addEventListener("click", () => {
-    hiddenSkills.classList.toggle("show");
-    toggleBtn.innerText = hiddenSkills.classList.contains("show") 
-      ? "Show Less" 
+    skillsContainer.classList.toggle("expanded");
+    toggleBtn.innerText = skillsContainer.classList.contains("expanded")
+      ? "Show Less"
       : "Show More";
   });
 }
-
-
-
-
-// Toggle skills visibility
-const toggleBtn = document.getElementById('toggleSkills');
-const hiddenSkills = document.querySelector('.hidden-skills');
-
-if (toggleBtn && hiddenSkills) {
-  toggleBtn.addEventListener('click', () => {
-    hiddenSkills.classList.toggle('show');
-    toggleBtn.textContent = hiddenSkills.classList.contains('show') 
-      ? 'Show Less' 
-      : 'Show More';
-  });
-}
-
