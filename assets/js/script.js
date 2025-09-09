@@ -37,7 +37,7 @@ $(document).ready(function () {
         }, 500, 'linear')
     });
 
-    // <!-- emailjs to mail contact form data -->
+    // emailjs to mail contact form data
     $("#contact-form").submit(function (event) {
         emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
 
@@ -52,14 +52,13 @@ $(document).ready(function () {
             });
         event.preventDefault();
     });
-    // <!-- emailjs to mail contact form data -->
 
 });
 
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Jigar Sable";
+            document.title = "Portfolio | Nirbhay Kumar";
             $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
@@ -69,7 +68,7 @@ document.addEventListener('visibilitychange',
     });
 
 
-// <!-- typed js effect starts -->
+// typed js effect
 var typed = new Typed(".typing-text", {
     strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
     loop: true,
@@ -77,9 +76,8 @@ var typed = new Typed(".typing-text", {
     backSpeed: 25,
     backDelay: 500,
 });
-// <!-- typed js effect ends -->
 
-// ===== Fetch & Show Skills Only (Projects Removed) =====
+// ===== Fetch & Show Skills Only =====
 async function fetchData() {
     let response = await fetch("skills.json");
     const data = await response.json();
@@ -105,32 +103,21 @@ fetchData().then(data => {
     showSkills(data);
 });
 
-// <!-- tilt js effect starts -->
+// tilt js effect
 VanillaTilt.init(document.querySelectorAll(".tilt"), {
     max: 15,
 });
-// <!-- tilt js effect ends -->
 
 // disable developer mode
 document.onkeydown = function (e) {
-    if (e.keyCode == 123) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-    }
+    if (e.keyCode == 123) return false;
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
 }
 
-// Start of Tawk.to Live Chat
+// Tawk.to Live Chat
 var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 (function () {
     var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
@@ -140,10 +127,8 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     s1.setAttribute('crossorigin', '*');
     s0.parentNode.insertBefore(s1, s0);
 })();
-// End of Tawk.to Live Chat
 
-
-/* ===== SCROLL REVEAL ANIMATION ===== */
+// Scroll Reveal Animation
 const srtop = ScrollReveal({
     origin: 'top',
     distance: '80px',
@@ -155,7 +140,6 @@ const srtop = ScrollReveal({
 srtop.reveal('.home .content h3', { delay: 200 });
 srtop.reveal('.home .content p', { delay: 200 });
 srtop.reveal('.home .content .btn', { delay: 200 });
-
 srtop.reveal('.home .image', { delay: 400 });
 srtop.reveal('.home .linkedin', { interval: 600 });
 srtop.reveal('.home .github', { interval: 800 });
