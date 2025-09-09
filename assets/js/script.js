@@ -39,9 +39,9 @@ $(document).ready(function () {
 
     // <!-- emailjs to mail contact form data -->
     $("#contact-form").submit(function (event) {
-        emailjs.init("sC-jKUkE0ehCNB-mK");
+        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
 
-        emailjs.sendForm('service_p13l0km', 'template_ha9qlfu', '#contact-form')
+        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
                 document.getElementById("contact-form").reset();
@@ -59,20 +59,19 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Nirbhay Kumar";
-            $("#favicon").attr("href", "https://i.postimg.cc/8C1tGgT4/IMG20250721182033-1.jpg");
+            document.title = "Portfolio | Jigar Sable";
+            $("#favicon").attr("href", "assets/images/favicon.png");
         }
         else {
             document.title = "Come Back To Portfolio";
             $("#favicon").attr("href", "assets/images/favhand.png");
         }
     });
-//    
 
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["Frontend Development", "Backend Development", "Web Designing", "Android Development", "Web Development"],
+    strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -192,15 +191,15 @@ document.onkeydown = function (e) {
 }
 
 // Start of Tawk.to Live Chat
-// var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-// (function () {
-//     var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-//     s1.async = true;
-//     s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
-//     s1.charset = 'UTF-8';
-//     s1.setAttribute('crossorigin', '*');
-//     s0.parentNode.insertBefore(s1, s0);
-// })();
+var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+(function () {
+    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
+    s1.charset = 'UTF-8';
+    s1.setAttribute('crossorigin', '*');
+    s0.parentNode.insertBefore(s1, s0);
+})();
 // End of Tawk.to Live Chat
 
 
@@ -250,17 +249,3 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
-
-
-// Show More / Show Less toggle for Skills
-const toggleBtn = document.getElementById("toggleSkills");
-const skillsContainer = document.getElementById("skillsContainer");
-
-if (toggleBtn && skillsContainer) {
-  toggleBtn.addEventListener("click", () => {
-    skillsContainer.classList.toggle("expanded");
-    toggleBtn.innerText = skillsContainer.classList.contains("expanded")
-      ? "Show Less"
-      : "Show More";
-  });
-}
