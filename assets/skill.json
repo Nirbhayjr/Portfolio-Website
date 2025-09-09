@@ -1,8 +1,0 @@
-[
-  { "icon": "https://img.icons8.com/color/48/html-5.png", "name": "HTML5" },
-  { "icon": "https://img.icons8.com/color/48/css3.png", "name": "CSS3" },
-  { "icon": "https://img.icons8.com/color/48/javascript.png", "name": "JavaScript" },
-  { "icon": "https://img.icons8.com/color/48/python.png", "name": "Python" },
-  { "icon": "https://img.icons8.com/color/48/java.png", "name": "Java" },
-  { "icon": "https://img.icons8.com/color/48/react-native.png", "name": "React" }
-]
