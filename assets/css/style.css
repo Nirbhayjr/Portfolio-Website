@@ -1223,3 +1223,15 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+
+
+.profile-img {
+  width: 220px;         /* same width & height */
+  height: 220px;
+  object-fit: cover;     /* crop, don’t stretch */
+  border-radius: 50%;    /* makes it round */
+  display: block;
+  margin: 0 auto;        /* centers the image */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* optional nice shadow */
+}
+
