@@ -212,13 +212,14 @@ header .navbar ul li a:hover {
   z-index: 1;
 }
 .home .image img {
-  width: 55%;
+  width: 300px;
+  height: 300px;
   margin-left: 6rem;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  object-fit: cover;
 }
-
 .home .image img:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
