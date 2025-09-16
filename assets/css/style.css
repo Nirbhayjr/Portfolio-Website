@@ -212,15 +212,9 @@ header .navbar ul li a:hover {
   z-index: 1;
 }
 .home .image img {
-  /* Set a fixed width and height for a perfect circle */
-  width: 200px; 
-  height: 200px;
-  
-  /* Maintain aspect ratio and cover the area */
-  object-fit: cover; 
-  
+  width: 70%;
   margin-left: 6rem;
-  border-radius: 50%; 
+  border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
